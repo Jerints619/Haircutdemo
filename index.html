@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
     <head>
         <meta charset="utf-8" />
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="width=device-width, initial-scale=1.0, user-scalable=no, orientation=portrait" name="viewport" />
         <title>Rising Beauty Studio</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link
@@ -275,11 +275,11 @@
                                             class="text-white hover:text-yellow-500 text-xl"
                                             href="#contact">Contact Us</a></li>
                                     <li>
-                                        <button
-                                            class="border border-yellow-500 text-yellow-500 px-4 py-2 rounded hover:bg-yellow-500 hover:text-black w-full"
-                                            onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                                        <a href="#contact" 
+                                            class="block border border-yellow-500 text-yellow-500 px-4 py-2 rounded hover:bg-yellow-500 hover:text-black w-full text-center"
+                                            onclick="toggleMenu(false)">
                                             BOOK APPOINTMENT
-                                        </button>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -305,7 +305,7 @@
                                 Contact Us
                             </a>
                         </div>
-                        <button
+                        <button href="#contact"
                             class="hidden md:block border border-yellow-500 text-yellow-500 px-4 py-2 rounded hover:bg-yellow-500 hover:text-black"
                             onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
                             BOOK APPOINTMENT
