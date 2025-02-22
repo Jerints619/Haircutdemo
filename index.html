@@ -1,60 +1,133 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="utf-8" />
-        <meta content="width=device-width, initial-scale=1.0, user-scalable=no, orientation=portrait" name="viewport" />
-        <title>Rising Beauty Studio</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-            rel="stylesheet" />
-        <script src="script.js" defer></script>
-        <style>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no, orientation=portrait" name="viewport" />
+    <title>Rising Beauty Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+    <style>
         body {
             font-family: 'Arial', sans-serif;
             background-color: black;
             scroll-behavior: smooth;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
 
         /* Responsive styles for all screen sizes */
         @media (max-width: 640px) {
+
             /* Mobile phones */
-            .container { padding: 0 15px; }
-            h1 { font-size: 1.75rem !important; }
-            h2 { font-size: 1.25rem !important; }
-            p { font-size: 0.875rem !important; }
-            .hidden { display: none !important; }
-            .grid { grid-template-columns: 1fr !important; }
-            .space-x-8 > * + * { margin-left: 1rem !important; }
-            .px-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
-            .py-3 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
-            [style*="margin-left"] { margin-left: 0 !important; }
-            .text-4xl { font-size: 1.875rem !important; }
-            .text-6xl { font-size: 2.5rem !important; }
+            .container {
+                padding: 0 15px;
+            }
+
+            h1 {
+                font-size: 1.75rem !important;
+            }
+
+            h2 {
+                font-size: 1.25rem !important;
+            }
+
+            p {
+                font-size: 0.875rem !important;
+            }
+
+            .hidden {
+                display: none !important;
+            }
+
+            .grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .space-x-8>*+* {
+                margin-left: 1rem !important;
+            }
+
+            .px-8 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .py-3 {
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+            }
+
+            [style*="margin-left"] {
+                margin-left: 0 !important;
+            }
+
+            .text-4xl {
+                font-size: 1.875rem !important;
+            }
+
+            .text-6xl {
+                font-size: 2.5rem !important;
+            }
         }
 
         @media (min-width: 641px) and (max-width: 768px) {
+
             /* Tablets */
-            .container { padding: 0 20px; }
-            h1 { font-size: 2rem !important; }
-            h2 { font-size: 1.5rem !important; }
-            p { font-size: 1rem !important; }
-            .grid { grid-template-columns: repeat(2, 1fr) !important; }
-            .space-x-8 > * + * { margin-left: 1.5rem !important; }
-            [style*="margin-left: 160px"] { margin-left: 80px !important; }
-            .text-4xl { font-size: 2.25rem !important; }
-            .text-6xl { font-size: 3rem !important; }
+            .container {
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 2rem !important;
+            }
+
+            h2 {
+                font-size: 1.5rem !important;
+            }
+
+            p {
+                font-size: 1rem !important;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .space-x-8>*+* {
+                margin-left: 1.5rem !important;
+            }
+
+            [style*="margin-left: 160px"] {
+                margin-left: 80px !important;
+            }
+
+            .text-4xl {
+                font-size: 2.25rem !important;
+            }
+
+            .text-6xl {
+                font-size: 3rem !important;
+            }
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
+
             /* Small laptops */
-            .container { padding: 0 30px; }
-            .grid { grid-template-columns: repeat(2, 1fr) !important; }
-            [style*="margin-left: 160px"] { margin-left: 120px !important; }
+            .container {
+                padding: 0 30px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            [style*="margin-left: 160px"] {
+                margin-left: 120px !important;
+            }
         }
 
         /* Fix for mobile menu */
@@ -92,7 +165,7 @@
                 display: block !important;
                 z-index: 9999;
             }
-            
+
             .md\:hidden {
                 display: block !important;
             }
@@ -105,7 +178,9 @@
         }
 
         /* Responsive form elements */
-        input, textarea, button {
+        input,
+        textarea,
+        button {
             max-width: 100%;
         }
 
@@ -129,17 +204,25 @@
                 width: 100% !important;
             }
         }
-        
+
         /* Mobile menu transitions */
         .mobile-menu-transition {
             transition: all 0.3s ease-in-out;
         }
-        
+
         /* Responsive font sizes */
         @media (max-width: 768px) {
-            h1 { font-size: 1.875rem !important; }
-            h2 { font-size: 1.5rem !important; }
-            p { font-size: 1rem !important; }
+            h1 {
+                font-size: 1.875rem !important;
+            }
+
+            h2 {
+                font-size: 1.5rem !important;
+            }
+
+            p {
+                font-size: 1rem !important;
+            }
         }
 
         .scrollbar-hide::-webkit-scrollbar {
@@ -186,6 +269,7 @@
                 max-width: 280px;
                 bottom: 25%;
             }
+
             .loading-text {
                 bottom: 20%;
                 font-size: 16px;
@@ -204,8 +288,13 @@
         }
 
         @keyframes loading {
-            0% { width: 0%; }
-            100% { width: 100%; }
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
         }
 
         .loading-text {
@@ -225,635 +314,609 @@
             opacity: 0;
         }
     </style>
-    </head>
-    <body class="bg-black text-white" style="background-color: black;">
-        <!-- Splash Screen -->
-        <div id="splash-screen">
-            <img src="img/WhatsApp Image 2025-02-21 at 13.01.36_2059fb46.jpg" alt="Welcome to Rising Beauty Studio">
-            <div class="loading-bar"></div>
-            <div class="loading-text">LOADING...</div>
-        </div>
+</head>
 
-        <!-- Main Content -->
-        <div id="main-content">
-            <!-- Hero Section -->
-            <header id="home" class="relative" style="padding: 10px;">
-                <img alt="Interior of a beauty studio with chairs and mirrors"
-                    class="w-full h-screen object-cover" height="1080"
-                    src="https://storage.googleapis.com/a1aa/image/GNeWPIAyBCX3bK5gqehL4IkpULNJ3merPEWmCVVBHf7m7rLQB.jpg"
-                    width="1920" />
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col">
-                    <nav class="flex justify-between items-center p-6">
-                        <button id="menuButton"
-                            class="text-yellow-500 text-2xl md:hidden">
-                            <i class="fas fa-bars"></i>
-                        </button>
+<body class="bg-black text-white" style="background-color: black;">
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img src="img/WhatsApp Image 2025-02-21 at 13.01.36_2059fb46.jpg" alt="Welcome to Rising Beauty Studio">
+        <div class="loading-bar"></div>
+        <div class="loading-text">LOADING...</div>
+    </div>
 
-                        <!-- Mobile Menu -->
-                        <div id="mobileMenu"
-                            class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 z-50 mobile-menu-transition">
-                            <div class="p-6">
-                                <button id="closeMenu"
-                                    class="text-yellow-500 text-2xl absolute top-6 right-6">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                                <ul
-                                    class="flex flex-col space-y-6 mt-16 text-center">
-                                    <li><a
-                                            class="text-white hover:text-yellow-500 text-xl"
-                                            href="#home">Home</a></li>
-                                    <li><a
-                                            class="text-white hover:text-yellow-500 text-xl"
-                                            href="service.html" onclick="toggleMenu(false)">Services</a></li>
-                                    <li><a
-                                            class="text-white hover:text-yellow-500 text-xl"
-                                            href="#about">About Us</a></li>
-                                    <li><a
-                                            class="text-white hover:text-yellow-500 text-xl"
-                                            href="#transformations">Blog</a></li>
-                                    <li><a
-                                            class="text-white hover:text-yellow-500 text-xl"
-                                            href="#contact">Contact Us</a></li>
-                                    <li>
-                                        <a href="#contact" 
-                                            class="block border border-yellow-500 text-yellow-500 px-4 py-2 rounded hover:bg-yellow-500 hover:text-black w-full text-center"
-                                            onclick="toggleMenu(false)">
-                                            BOOK APPOINTMENT
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Hero Section -->
+        <header id="home" class="relative" style="padding: 10px;">
+            <div id="imageSlider" class="w-full h-screen relative overflow-hidden">
+                <img alt="Beauty salon interior" class="w-full h-screen object-cover absolute transition-opacity duration-1000 opacity-0"
+                    src="img/Image1.jpg">
+                <img alt="Beauty salon services" class="w-full h-screen object-cover absolute transition-opacity duration-1000 opacity-0"
+                    src="img/Image 8.jpg">
+                <img alt="Professional beauty treatment" class="w-full h-screen object-cover absolute transition-opacity duration-1000 opacity-0"
+                    src="img/Image 7.avif">
+                <img alt="Salon services" class="w-full h-screen object-cover absolute transition-opacity duration-1000 opacity-0"
+                    src="img/Image 6.avif">
+                <img alt="Beauty treatments" class="w-full h-screen object-cover absolute transition-opacity duration-1000 opacity-0"
+                    src="img/Image 5.avif">
+                <img alt="Hair styling" class="w-full h-screen object-cover absolute transition-opacity duration-1000 opacity-0"
+                    src="img/Image 4.jpg">
+                <img alt="Makeup services" class="w-full h-screen object-cover absolute transition-opacity duration-1000 opacity-0"
+                    src="img/Image 3.jpg">
+                <img alt="Salon experience" class="w-full h-screen object-cover absolute transition-opacity duration-1000 opacity-0"
+                    src="img/Image 2.jpg">
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col">
+                <nav class="flex justify-between items-center p-6">
+                    <button id="menuButton" class="text-yellow-500 text-2xl md:hidden">
+                        <i class="fas fa-bars"></i>
+                    </button>
 
-                        <div class="text-2xl font-bold" style="margin-left: 20px;">
-                            <!-- Logo -->
-                        </div>
-                        <div class="hidden md:flex space-x-8" style="margin-left: 160px; font-size: 20px;">
-                            <a href="#home" class="text-white hover:text-yellow-500">
-                                Home
-                            </a>
-                            <a href="service.html" class="text-white hover:text-yellow-500">
-                                Services
-                            </a>
-                            <a href="#about" class="text-white hover:text-yellow-500">
-                                About Us
-                            </a>
-                            <a href="#transformations" class="text-white hover:text-yellow-500">
-                                Blog
-                            </a>
-                            <a href="#contact" class="text-white hover:text-yellow-500">
-                                Contact Us
-                            </a>
-                        </div>
-                        <button href="#contact"
-                            class="hidden md:block border border-yellow-500 text-yellow-500 px-4 py-2 rounded hover:bg-yellow-500 hover:text-black"
-                            onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                            BOOK APPOINTMENT
-                        </button>
-                    </nav>
-                    <div
-                        class="flex-grow flex flex-col justify-center items-center text-center px-4">
-                        <div class="mb-6">
-                            <img alt="Logo of the beauty studio" class="mx-auto"
-                                height="200px"
-                                src="img/logo-head 2.png"
-                                width="200px" />
-                        </div> <br>
-                        <h1 class="text-4xl md:text-5xl font-bold mb-4">
-                            ELEVATE YOUR BEAUTY WITH RISING BEAUTY STUDIO
-                        </h1>
-                        <p class="text-lg md:text-xl mb-8">
-                            Step Into Luxury And Walk Out Transformed. Where Beauty
-                            Meets Care
-                        </p>
-                        <button
-                            class="hidden md:block border border-yellow-500 text-yellow-500 px-4 py-2 rounded hover:bg-yellow-500 hover:text-black"
-                            onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                            Call Us Now to Book Your Appointment
-                        </button>
-                        <div class="flex items-center mt-8 space-x-4">
-                            <i class="fas fa-envelope text-yellow-500">
-                            </i>
-                            <span>
-                                info@company.com
-                            </span>
-                            <i class="fas fa-phone text-yellow-500">
-                            </i>
-                            <span>
-                                (+732) 992 5960
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <!-- About Us Section -->
-            <section id="about" class="min-h-screen py-20 bg-black text-white">
-                <div class="container mx-auto px-4">
-                    <div
-                        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center bg-black p-6 rounded-lg">
-                        <div class="md:w-1/2 p-6">
-                            <h1 class="text-4xl font-bold mb-4">
-                                About Us
-                            </h1>
-                            <h2 class="text-2xl font-semibold mb-4">
-                                Welcome to Rising Beauty <br> Studio – Elevating
-                                Your
-                                Style
-                            </h2>
-                            <p class="text-lg mb-6">
-                                At Rising Beauty Studio, we specialize in enhancing
-                                your unique beauty. Our professional stylists and
-                                beauty experts are dedicated to providing
-                                personalized services tailored to your needs.
-                                Whether you're looking for a fresh cut, a vibrant
-                                color, or a complete makeover, Rising Beauty Studio
-                                is here to elevate your beauty.
-                            </p>
-                            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
-                                <div class="flex items-center">
-                                    <i
-                                        class="fas fa-envelope text-yellow-500 text-xl sm:text-2xl mr-3"></i>
-                                    <a href="mailto:info@company.com"
-                                        class="text-sm sm:text-base hover:text-yellow-500 transition-colors"
-                                        onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                                        info@company.com
+                    <!-- Mobile Menu -->
+                    <div id="mobileMenu"
+                        class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 z-50 mobile-menu-transition">
+                        <div class="p-6">
+                            <button id="closeMenu" class="text-yellow-500 text-2xl absolute top-6 right-6">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <ul class="flex flex-col space-y-6 mt-16 text-center">
+                                <li><a class="text-white hover:text-yellow-500 text-xl" href="#home">Home</a></li>
+                                <li><a class="text-white hover:text-yellow-500 text-xl" href="service.html"
+                                        onclick="toggleMenu(false)">Services</a></li>
+                                <li><a class="text-white hover:text-yellow-500 text-xl" href="#about">About Us</a></li>
+                                <li><a class="text-white hover:text-yellow-500 text-xl" href="#transformations">Blog</a>
+                                </li>
+                                <li><a class="text-white hover:text-yellow-500 text-xl" href="#contact">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="#contact"
+                                        class="block border border-yellow-500 text-yellow-500 px-4 py-2 rounded hover:bg-yellow-500 hover:text-black w-full text-center"
+                                        onclick="toggleMenu(false)">
+                                        BOOK APPOINTMENT
                                     </a>
-                                </div>
-                                <div class="flex items-center">
-                                    <i
-                                        class="fas fa-phone text-yellow-500 text-xl sm:text-2xl mr-3"></i>
-                                    <a href="tel:+63-555-1212"
-                                        class="text-sm sm:text-base hover:text-yellow-500 transition-colors"
-                                        onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                                        (+732) 992 5960
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 p-6">
-                            <img alt="A person getting a haircut with a clipper"
-                                class="w-full h-auto rounded-lg shadow-lg"
-                                src="https://storage.googleapis.com/a1aa/image/O1CZM9SiPr5TGp0LSDZlBErezvSE5qS6wR0PL0lfhIRHA7CUA.jpg" />
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <!-- Services Section -->
-            <section id="services" class="container mx-auto py-16 px-4 text-center">
-                <h1 class="text-3xl font-bold mb-2">Our Services: Tailored to
-                    Perfection</h1>
-                <p class="text-lg mb-12">Our Signature Beauty Services</p>
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-                    <div class="border border-yellow-500 p-4 sm:p-6">
-                        <i class="fas fa-cut text-yellow-500 text-4xl mb-4"></i>
-                        <h2 class="text-xl font-bold mb-2">Haircuts & Creative
-                            Styling</h2>
-                        <p class="text-gray-400">Precision haircuts and trendy
-                            styles that enhance your look and personality.</p>
+                    <div class="text-2xl font-bold" style="margin-left: 20px;">
+                        <!-- Logo -->
                     </div>
-                    <div class="border border-yellow-500 p-4 sm:p-6">
-                        <i
-                            class="fas fa-hand-sparkles text-yellow-500 text-4xl mb-4"></i>
-                        <h2 class="text-xl font-bold mb-2">Manicure & Pedicure</h2>
-                        <p class="text-gray-400">Pamper your hands and feet with
-                            expert nail care for a polished and refreshed look.</p>
+                    <div class="hidden md:flex space-x-8" style="margin-left: 160px; font-size: 20px;">
+                        <a href="#home" class="text-white hover:text-yellow-500">
+                            Home
+                        </a>
+                        <a href="service.html" class="text-white hover:text-yellow-500">
+                            Services
+                        </a>
+                        <a href="#about" class="text-white hover:text-yellow-500">
+                            About Us
+                        </a>
+                        <a href="#transformations" class="text-white hover:text-yellow-500">
+                            Blog
+                        </a>
+                        <a href="#contact" class="text-white hover:text-yellow-500">
+                            Contact Us
+                        </a>
                     </div>
-                    <div class="border border-yellow-500 p-4 sm:p-6">
-                        <i
-                            class="fas fa-paint-brush text-yellow-500 text-4xl mb-4"></i>
-                        <h2 class="text-xl font-bold mb-2">Makeup Artistry & Beauty
-                            Treatments</h2>
-                        <p class="text-gray-400">Flawless makeup and rejuvenating
-                            beauty treatments for any occasion.</p>
-                    </div>
-                    <div class="border border-yellow-500 p-4 sm:p-6">
-                        <i class="fas fa-tint text-yellow-500 text-4xl mb-4"></i>
-                        <h2 class="text-xl font-bold mb-2">Vibrant Coloring &
-                            Highlights</h2>
-                        <p class="text-gray-400">Stunning hair colors and highlights
-                            to add dimension and vibrancy to your hair.</p>
-                    </div>
-                    <div class="border border-yellow-500 p-4 sm:p-6">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fas fa-cut text-yellow-500 text-3xl mr-2"></i>
-                            <i class="fas fa-male text-yellow-500 text-3xl"></i>
-                        </div>
-                        <h2 class="text-xl font-bold mb-2">Mustache Trimming</h2>
-                        <p class="text-gray-400">Expert grooming to shape and refine
-                            your mustache for a sharp and neat look.</p>
-                    </div>
-                    <div class="border border-yellow-500 p-4 sm:p-6">
-                        <i class="fas fa-spa text-yellow-500 text-4xl mb-4"></i>
-                        <h2 class="text-xl font-bold mb-2">Deep Conditioning & Hair
-                            Treatments</h2>
-                        <p class="text-gray-400">Nourishing treatments to
-                            strengthen, repair, and add shine to your hair.</p>
-                    </div>
-                </div>
-                <div class="mt-12">
+                    <button href="#contact"
+                        class="hidden md:block border border-yellow-500 text-yellow-500 px-4 py-2 rounded hover:bg-yellow-500 hover:text-black"
+                        onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        BOOK APPOINTMENT
+                    </button>
+                </nav>
+                <div class="flex-grow flex flex-col justify-center items-center text-center px-4">
+                    <div class="mb-6">
+                        <img alt="Logo of the beauty studio" class="mx-auto" height="200px" src="img/logo-head 2.png"
+                            width="200px" />
+                    </div> <br>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                        ELEVATE YOUR BEAUTY WITH RISING BEAUTY STUDIO
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8">
+                        Step Into Luxury And Walk Out Transformed. Where Beauty
+                        Meets Care
+                    </p>
                     <button
-                        class="bg-red-600 text-white py-3 px-6 rounded-full text-lg font-bold"
+                        class="hidden md:block border border-yellow-500 text-yellow-500 px-4 py-2 rounded hover:bg-yellow-500 hover:text-black"
                         onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
                         Call Us Now to Book Your Appointment
                     </button>
-                </div>
-            </section>
-
-            <!-- Why Choose Us Section -->
-            <section class="bg-black-200 py-12">
-                <div class="bg-black p-4 max-w-6xl mx-auto">
-                    <div class="flex flex-col md:flex-row">
-                        <div class="w-full md:w-1/2">
-                            <img
-                                alt="A black and white photo of a woman with long hair"
-                                class="w-full h-64 md:h-full object-cover"
-                                src="https://storage.googleapis.com/a1aa/image/8G4OkSEqbLJpKFBfD3J5H8iS0yuhiRekVCXtmzFb0xgdC7CUA.jpg" />
-                        </div>
-                        <div class="w-full md:w-1/2 bg-yellow-500 p-4 md:p-8">
-                            <br><br><br>
-                            <h2
-                                class="text-base md:text-sm font-semibold text-gray-700 mb-2">
-                                WHY US
-                            </h2>
-                            <h1
-                                class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                                Why Choose Rising Beauty Studio?
-                            </h1>
-                            <ul
-                                class="text-gray-800 space-y-3 mb-6 text-sm md:text-base">
-                                <li class="flex items-start">
-                                    <span class="mr-2">•</span>
-                                    <span>Skilled stylists dedicated to precision
-                                        and creativity</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="mr-2">•</span>
-                                    <span>Tailored consultations to meet your unique
-                                        beauty needs</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="mr-2">•</span>
-                                    <span>High-quality hair and beauty products for
-                                        long-lasting results</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="mr-2">•</span>
-                                    <span>A serene and luxurious ambiance for a
-                                        relaxing experience</span>
-                                </li>
-                            </ul>
-                            <button
-                                class="w-full md:w-auto bg-transparent border-2 border-gray-900 text-gray-900 py-3 px-6 font-semibold hover:bg-gray-900 hover:text-white transition duration-300 text-sm md:text-base"
-                                onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                                BOOK APPOINTMENT
-                            </button>
-                        </div>
+                    <div class="flex items-center mt-8 space-x-4">
+                        <i class="fas fa-envelope text-yellow-500">
+                        </i>
+                        <span>
+                            info@company.com
+                        </span>
+                        <i class="fas fa-phone text-yellow-500">
+                        </i>
+                        <span>
+                            (+732) 992 5960
+                        </span>
                     </div>
                 </div>
-            </section>
+            </div>
+        </header>
 
-            <!-- Transformations Section -->
-            <section id="transformations"
-                class="min-h-screen py-20 bg-gray-900 text-white">
-                <div class="container mx-auto px-4">
-                    <div class="text-center mb-12">
-                        <p class="text-yellow-400">See the difference our experts
-                            can make</p>
-                        <h1 class="text-4xl font-bold">Transformations at Rising
-                            Beauty Studio</h1>
-                    </div>
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                        <!-- Row 1 -->
-                        <div
-                            class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
-                            <img alt="Before and after hair transformation"
-                                class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                                src="img/1.jpg" />
-                        </div>
-                        <div
-                            class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
-                            <img alt="Short hair transformation"
-                                class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                                src="img/2.avif" />
-                        </div>
-                        <div
-                            class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
-                            <img alt="Pink hair transformation"
-                                class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                                src="img/3.png" />
-                        </div>
-                        <!-- Row 2 -->
-                        <div
-                            class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
-                            <img alt="Manicure transformation"
-                                class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                                src="img/4.jpg" />
-                        </div>
-                        <div
-                            class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
-                            <img alt="Before and after face transformation"
-                                class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                                src="img/5.jpg" />
-                        </div>
-                        <div
-                            class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
-                            <img alt="Face transformation"
-                                class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                                src="img/6.jpg" />
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- Client Reviews Section -->
-            <section class="bg-white" style="padding: 10px;">
-                <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-                    <div class="text-center">
-                        <h2 class="text-lg text-yellow-600 font-semibold">
-                            WHAT OUR CLIENTS SAY
-                        </h2>
-                        <h1 class="text-4xl font-bold text-black mt-2">
-                            CLIENT REVIEWS
-                        </h1>
-                    </div>
-                    <div
-                        class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Review 1 -->
-                        <div class="text-center p-4">
-                            <img alt="Client 1" class="mx-auto rounded-full"
-                                height="100"
-                                src="https://storage.googleapis.com/a1aa/image/Y4mYQaiwAL7EPZQTytE5rla1Wf1FcKRpsKfvw5hnTv75D7CUA.jpg"
-                                width="100" />
-                            <p class="mt-4 text-black">
-                                <span class="text-yellow-500"
-                                    style="margin-left: 3%;">🌟🌟🌟🌟🌟</span><br>
-                                "Absolutely love this place! The stylists are incredibly talented, and they truly listen to what you want. My hair has never looked better!"
-                                — Emma R., Manhattan, NYC
-                            </p>
-                            <p class="mt-2 text-yellow-600 font-semibold">
-                                EMMA R.
-                            </p>
-                        </div>
-
-                        <!-- Review 2 -->
-                        <div class="text-center p-4">
-                            <img alt="Client 2" class="mx-auto rounded-full"
-                                height="100"
-                                src="https://storage.googleapis.com/a1aa/image/GSgoYmq05eRVayrNcXgImXxhCUB1WOMsHdz3Q99nPw77hdBKA.jpg"
-                                width="100" />
-                            <p class="mt-4 text-black">
-                                <span class="text-yellow-500"
-                                    style="margin-left: 3%;">🌟🌟🌟🌟🌟</span><br>
-                                "I had my bridal makeup done here, and it was flawless! The team was professional, and the results were stunning. Highly recommend!"
-                                — Sophia L., Brooklyn, NYC
-                            </p>
-                            <p class="mt-2 text-yellow-600 font-semibold">
-                                SOPHIA L.
-                            </p>
-                        </div>
-
-                        <!-- Review 3 -->
-                        <div class="text-center p-4">
-                            <img alt="Client 3" class="mx-auto rounded-full"
-                                height="100"
-                                src="https://storage.googleapis.com/a1aa/image/Waf6T96j1aV6NCTmNXb7eH0oOtlfasnBs5HeCywFeuIafwuAF.jpg"
-                                width="100" />
-                            <p class="mt-4 text-black">
-                                <span class="text-yellow-500"
-                                    style="margin-left: 3%;">🌟🌟🌟🌟🌟</span><br>
-                                "The ambiance is so relaxing, and the staff is super friendly. Got a haircut and highlights, and I'm obsessed with the results!"
-                                — Jessica M., Queens, NYC
-                            </p>
-                            <p class="mt-2 text-yellow-600 font-semibold">
-                                JESSICA M.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="mt-12">
-                        <p class="text-lg font-semibold text-white">
-                            Join Our Happy Clients! Call (+732) 992 5960
-                        </p>
-                    </div>
-
-                    <button style="margin-left: 35%;"
-                        class="w-full md:w-auto bg-transparent border-2 border-gray-900 text-gray-900 py-3 px-6 font-semibold hover:bg-gray-900 hover:text-white transition duration-300 text-sm md:text-base"
-                        onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                        Join Our Happy Clients! Call (+732) 992 5960
-                    </button>
-                </div>
-            </section>
-
-            <!-- Meet the Team Section -->
-            <section class="bg-black text-white">
-                <div
-                    class="container mx-auto px-4 py-16 flex flex-col lg:flex-row items-center">
-                    <div style="margin-left: 9%;" class="lg:w-1/2 lg:pr-8">
+        <!-- About Us Section -->
+        <section id="about" class="min-h-screen py-20 bg-black text-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center bg-black p-6 rounded-lg">
+                    <div class="md:w-1/2 p-6">
                         <h1 class="text-4xl font-bold mb-4">
-                            Meet the Team
+                            About Us
                         </h1>
                         <h2 class="text-2xl font-semibold mb-4">
-                            Introducing the Rising Beauty <br> Experts – Masters of
+                            Welcome to Rising Beauty <br> Studio – Elevating
+                            Your
                             Style
                         </h2>
-                        <p class="mb-8">
-                            Showcase our talented stylists and beauty professionals
-                            <br> with headshots and short bios, highlighting their
-                            skills, <br> experience, and passion for beauty.
+                        <p class="text-lg mb-6">
+                            At Rising Beauty Studio, we specialize in enhancing
+                            your unique beauty. Our professional stylists and
+                            beauty experts are dedicated to providing
+                            personalized services tailored to your needs.
+                            Whether you're looking for a fresh cut, a vibrant
+                            color, or a complete makeover, Rising Beauty Studio
+                            is here to elevate your beauty.
                         </p>
-                        <a
-                            class="inline-block px-6 py-3 border border-yellow-500 text-white-500 hover:bg-yellow-500 hover:text-black transition-colors duration-300"
-                            href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">
-                            Experience Our Expertise
-                        </a>
-                    </div>
-                    <div class="lg:w-1/2 mt-8 lg:mt-0">
-                        <img
-                            alt="Group of beauty professionals standing and sitting in a salon, showcasing their expertise and style"
-                            height="400"
-                            src="https://storage.googleapis.com/a1aa/image/FS1moJ9qwlqCBJUn2vRwWfUeizrIHYVmKa6zjDcLTLCZE7CUA.jpg"
-                            width="600" />
-                    </div>
-                </div>
-            </section>
-
-            <!-- Location Section -->
-            <section class="bg-black text-white py-10">
-                <div class="container mx-auto px-4">
-                    <div class="max-w-6xl mx-auto">
-                        <!-- Text Content -->
-                        <div class="text-left mb-8">
-                            <h1 class="text-4xl font-bold mb-2">
-                                Location: Find Us Easily
-                            </h1>
-                            <p class="text-xl mb-4">
-                                Visit Us at Rising Beauty Studio
-                            </p>
-                            <div class="flex items-center mb-6">
-                                <i
-                                    class="fas fa-map-marker-alt text-yellow-500 text-2xl mr-3"></i>
-                                <p class="text-lg">
-                                    Conveniently located at 200 Buckelew Ave 2nd Floor, Suite F, Jamesburg, NJ 08831
-                                </p>
+                        <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-yellow-500 text-xl sm:text-2xl mr-3"></i>
+                                <a href="mailto:info@company.com"
+                                    class="text-sm sm:text-base hover:text-yellow-500 transition-colors"
+                                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                                    info@company.com
+                                </a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-yellow-500 text-xl sm:text-2xl mr-3"></i>
+                                <a href="tel:+63-555-1212"
+                                    class="text-sm sm:text-base hover:text-yellow-500 transition-colors"
+                                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                                    (+732) 992 5960
+                                </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="md:w-1/2 p-6">
+                        <img alt="A person getting a haircut with a clipper" class="w-full h-auto rounded-lg shadow-lg"
+                            src="https://storage.googleapis.com/a1aa/image/O1CZM9SiPr5TGp0LSDZlBErezvSE5qS6wR0PL0lfhIRHA7CUA.jpg" />
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <!-- Map Image with Hidden Scroll -->
-                        <div class="w-full overflow-y-auto scrollbar-hide"
-                            style="max-height: 400px; -ms-overflow-style: none; scrollbar-width: none;">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.935862930297!2d-74.44373792346847!3d40.399794971444865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c55ab34748e1%3A0x1e67f865f595af71!2s200%20Buckelew%20Ave%202nd%20floor%2C%20Jamesburg%2C%20NJ%2008831!5e0!3m2!1sen!2sus!4v1709335961345!5m2!1sen!2sus"
-                                width="100%" 
-                                height="450" 
-                                style="border:0; border-radius: 8px;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
+        <!-- Services Section -->
+        <section id="services" class="container mx-auto py-16 px-4 text-center">
+            <h1 class="text-3xl font-bold mb-2">Our Services: Tailored to
+                Perfection</h1>
+            <p class="text-lg mb-12">Our Signature Beauty Services</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+                <div class="border border-yellow-500 p-4 sm:p-6">
+                    <i class="fas fa-cut text-yellow-500 text-4xl mb-4"></i>
+                    <h2 class="text-xl font-bold mb-2">Haircuts & Creative
+                        Styling</h2>
+                    <p class="text-gray-400">Precision haircuts and trendy
+                        styles that enhance your look and personality.</p>
+                </div>
+                <div class="border border-yellow-500 p-4 sm:p-6">
+                    <i class="fas fa-hand-sparkles text-yellow-500 text-4xl mb-4"></i>
+                    <h2 class="text-xl font-bold mb-2">Manicure & Pedicure</h2>
+                    <p class="text-gray-400">Pamper your hands and feet with
+                        expert nail care for a polished and refreshed look.</p>
+                </div>
+                <div class="border border-yellow-500 p-4 sm:p-6">
+                    <i class="fas fa-paint-brush text-yellow-500 text-4xl mb-4"></i>
+                    <h2 class="text-xl font-bold mb-2">Makeup Artistry & Beauty
+                        Treatments</h2>
+                    <p class="text-gray-400">Flawless makeup and rejuvenating
+                        beauty treatments for any occasion.</p>
+                </div>
+                <div class="border border-yellow-500 p-4 sm:p-6">
+                    <i class="fas fa-tint text-yellow-500 text-4xl mb-4"></i>
+                    <h2 class="text-xl font-bold mb-2">Vibrant Coloring &
+                        Highlights</h2>
+                    <p class="text-gray-400">Stunning hair colors and highlights
+                        to add dimension and vibrancy to your hair.</p>
+                </div>
+                <div class="border border-yellow-500 p-4 sm:p-6">
+                    <div class="flex justify-center items-center mb-4">
+                        <i class="fas fa-cut text-yellow-500 text-3xl mr-2"></i>
+                        <i class="fas fa-male text-yellow-500 text-3xl"></i>
+                    </div>
+                    <h2 class="text-xl font-bold mb-2">Mustache Trimming</h2>
+                    <p class="text-gray-400">Expert grooming to shape and refine
+                        your mustache for a sharp and neat look.</p>
+                </div>
+                <div class="border border-yellow-500 p-4 sm:p-6">
+                    <i class="fas fa-spa text-yellow-500 text-4xl mb-4"></i>
+                    <h2 class="text-xl font-bold mb-2">Deep Conditioning & Hair
+                        Treatments</h2>
+                    <p class="text-gray-400">Nourishing treatments to
+                        strengthen, repair, and add shine to your hair.</p>
+                </div>
+            </div>
+            <div class="mt-12">
+                <button class="bg-red-600 text-white py-3 px-6 rounded-full text-lg font-bold"
+                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    Call Us Now to Book Your Appointment
+                </button>
+            </div>
+        </section>
 
-                        <br><br>
-
-                        <button style="margin-left: 35%;"
-                            class="bg-transparent border-2 border-yellow-500 text-yellow-500 px-8 py-3 text-lg font-semibold hover:bg-yellow-500 hover:text-black transition duration-300"
+        <!-- Why Choose Us Section -->
+        <section class="bg-black-200 py-12">
+            <div class="bg-black p-4 max-w-6xl mx-auto">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/2">
+                        <img alt="A black and white photo of a woman with long hair"
+                            class="w-full h-64 md:h-full object-cover"
+                            src="https://storage.googleapis.com/a1aa/image/8G4OkSEqbLJpKFBfD3J5H8iS0yuhiRekVCXtmzFb0xgdC7CUA.jpg" />
+                    </div>
+                    <div class="w-full md:w-1/2 bg-yellow-500 p-4 md:p-8">
+                        <br><br><br>
+                        <h2 class="text-base md:text-sm font-semibold text-gray-700 mb-2">
+                            WHY US
+                        </h2>
+                        <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                            Why Choose Rising Beauty Studio?
+                        </h1>
+                        <ul class="text-gray-800 space-y-3 mb-6 text-sm md:text-base">
+                            <li class="flex items-start">
+                                <span class="mr-2">•</span>
+                                <span>Skilled stylists dedicated to precision
+                                    and creativity</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">•</span>
+                                <span>Tailored consultations to meet your unique
+                                    beauty needs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">•</span>
+                                <span>High-quality hair and beauty products for
+                                    long-lasting results</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-2">•</span>
+                                <span>A serene and luxurious ambiance for a
+                                    relaxing experience</span>
+                            </li>
+                        </ul>
+                        <button
+                            class="w-full md:w-auto bg-transparent border-2 border-gray-900 text-gray-900 py-3 px-6 font-semibold hover:bg-gray-900 hover:text-white transition duration-300 text-sm md:text-base"
                             onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                            Stop by or Call Us for Directions
+                            BOOK APPOINTMENT
                         </button>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Discount Section -->
-            <section class="bg-gray-900 text-black py-16">
-                <div class="container mx-auto px-4">
-                    <div class="bg-[#F4C430] p-8 rounded-lg">
-                        <div
-                            class="flex flex-col md:flex-row items-center justify-between">
-                            <!-- Text Content -->
-                            <div class="md:w-1/2 pr-8">
-                                <h1 class="text-6xl font-bold mb-4"
-                                    style="font-family: 'Arial Black', sans-serif;">
-                                    15% DISCOUNT
-                                </h1>
-                                <p class="text-lg mb-6">
-                                    Exclusive Offers for New Clients - Get 15% off
-                                    your first visit to Rising Beauty Salon! Call
-                                    (+732) 992 5960 or email us at [Email] to claim
-                                    this limited-time offer.
-                                </p>
-                                <button
-                                    class="bg-black text-white px-8 py-3 text-lg font-bold hover:bg-gray-900 transition duration-300"
-                                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                                    BOOK NOW
-                                </button>
+        <!-- Transformations Section -->
+        <section id="transformations" class="min-h-screen py-20 bg-gray-900 text-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <p class="text-yellow-400">See the difference our experts
+                        can make</p>
+                    <h1 class="text-4xl font-bold">Transformations at Rising
+                        Beauty Studio</h1>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <!-- Row 1 -->
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
+                        <img alt="Before and after hair transformation"
+                            class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                            src="img/1.jpg" />
+                    </div>
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
+                        <img alt="Short hair transformation"
+                            class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                            src="img/2.avif" />
+                    </div>
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
+                        <img alt="Pink hair transformation"
+                            class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                            src="img/3.png" />
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
+                        <img alt="Manicure transformation"
+                            class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                            src="img/4.jpg" />
+                    </div>
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
+                        <img alt="Before and after face transformation"
+                            class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                            src="img/5.jpg" />
+                    </div>
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-lg">
+                        <img alt="Face transformation"
+                            class="absolute inset-0 w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                            src="img/6.jpg" />
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Reviews Section -->
+        <section class="bg-white" style="padding: 10px;">
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-lg text-yellow-600 font-semibold">
+                        WHAT OUR CLIENTS SAY
+                    </h2>
+                    <h1 class="text-4xl font-bold text-black mt-2">
+                        CLIENT REVIEWS
+                    </h1>
+                </div>
+                <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Review 1 -->
+                    <div class="text-center p-4">
+                        <img alt="Client 1" class="mx-auto rounded-full" height="100"
+                            src="https://storage.googleapis.com/a1aa/image/Y4mYQaiwAL7EPZQTytE5rla1Wf1FcKRpsKfvw5hnTv75D7CUA.jpg"
+                            width="100" />
+                        <p class="mt-4 text-black">
+                            <span class="text-yellow-500" style="margin-left: 3%;">🌟🌟🌟🌟🌟</span><br>
+                            "Absolutely love this place! The stylists are incredibly talented, and they truly listen to
+                            what you want. My hair has never looked better!"
+                            — Emma R., Manhattan, NYC
+                        </p>
+                        <p class="mt-2 text-yellow-600 font-semibold">
+                            EMMA R.
+                        </p>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="text-center p-4">
+                        <img alt="Client 2" class="mx-auto rounded-full" height="100"
+                            src="https://storage.googleapis.com/a1aa/image/GSgoYmq05eRVayrNcXgImXxhCUB1WOMsHdz3Q99nPw77hdBKA.jpg"
+                            width="100" />
+                        <p class="mt-4 text-black">
+                            <span class="text-yellow-500" style="margin-left: 3%;">🌟🌟🌟🌟🌟</span><br>
+                            "I had my bridal makeup done here, and it was flawless! The team was professional, and the
+                            results were stunning. Highly recommend!"
+                            — Sophia L., Brooklyn, NYC
+                        </p>
+                        <p class="mt-2 text-yellow-600 font-semibold">
+                            SOPHIA L.
+                        </p>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="text-center p-4">
+                        <img alt="Client 3" class="mx-auto rounded-full" height="100"
+                            src="https://storage.googleapis.com/a1aa/image/Waf6T96j1aV6NCTmNXb7eH0oOtlfasnBs5HeCywFeuIafwuAF.jpg"
+                            width="100" />
+                        <p class="mt-4 text-black">
+                            <span class="text-yellow-500" style="margin-left: 3%;">🌟🌟🌟🌟🌟</span><br>
+                            "The ambiance is so relaxing, and the staff is super friendly. Got a haircut and highlights,
+                            and I'm obsessed with the results!"
+                            — Jessica M., Queens, NYC
+                        </p>
+                        <p class="mt-2 text-yellow-600 font-semibold">
+                            JESSICA M.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <p class="text-lg font-semibold text-white">
+                        Join Our Happy Clients! Call (+732) 992 5960
+                    </p>
+                </div>
+
+                <button style="margin-left: 35%;"
+                    class="w-full md:w-auto bg-transparent border-2 border-gray-900 text-gray-900 py-3 px-6 font-semibold hover:bg-gray-900 hover:text-white transition duration-300 text-sm md:text-base"
+                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    Join Our Happy Clients! Call (+732) 992 5960
+                </button>
+            </div>
+        </section>
+
+        <!-- Meet the Team Section -->
+        <section class="bg-black text-white">
+            <div class="container mx-auto px-4 py-16 flex flex-col lg:flex-row items-center">
+                <div style="margin-left: 9%;" class="lg:w-1/2 lg:pr-8">
+                    <h1 class="text-4xl font-bold mb-4">
+                        Meet the Team
+                    </h1>
+                    <h2 class="text-2xl font-semibold mb-4">
+                        Introducing the Rising Beauty <br> Experts – Masters of
+                        Style
+                    </h2>
+                    <p class="mb-8">
+                        Showcase our talented stylists and beauty professionals
+                        <br> with headshots and short bios, highlighting their
+                        skills, <br> experience, and passion for beauty.
+                    </p>
+                    <a class="inline-block px-6 py-3 border border-yellow-500 text-white-500 hover:bg-yellow-500 hover:text-black transition-colors duration-300"
+                        href="#contact"
+                        onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">
+                        Experience Our Expertise
+                    </a>
+                </div>
+                <div class="lg:w-1/2 mt-8 lg:mt-0">
+                    <img alt="Group of beauty professionals standing and sitting in a salon, showcasing their expertise and style"
+                        height="400"
+                        src="https://storage.googleapis.com/a1aa/image/FS1moJ9qwlqCBJUn2vRwWfUeizrIHYVmKa6zjDcLTLCZE7CUA.jpg"
+                        width="600" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="bg-black text-white py-10">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Text Content -->
+                    <div class="text-left mb-8">
+                        <h1 class="text-4xl font-bold mb-2">
+                            Location: Find Us Easily
+                        </h1>
+                        <p class="text-xl mb-4">
+                            Visit Us at Rising Beauty Studio
+                        </p>
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-map-marker-alt text-yellow-500 text-2xl mr-3"></i>
+                            <p class="text-lg">
+                                Conveniently located at 200 Buckelew Ave 2nd Floor, Suite F, Jamesburg, NJ 08831
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Map Image with Hidden Scroll -->
+                    <div class="w-full overflow-y-auto scrollbar-hide"
+                        style="max-height: 400px; -ms-overflow-style: none; scrollbar-width: none;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.935862930297!2d-74.44373792346847!3d40.399794971444865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3c55ab34748e1%3A0x1e67f865f595af71!2s200%20Buckelew%20Ave%202nd%20floor%2C%20Jamesburg%2C%20NJ%2008831!5e0!3m2!1sen!2sus!4v1709335961345!5m2!1sen!2sus"
+                            width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <br><br>
+
+                    <button style="margin-left: 35%;"
+                        class="bg-transparent border-2 border-yellow-500 text-yellow-500 px-8 py-3 text-lg font-semibold hover:bg-yellow-500 hover:text-black transition duration-300"
+                        onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        Stop by or Call Us for Directions
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discount Section -->
+        <section class="bg-gray-900 text-black py-16">
+            <div class="container mx-auto px-4">
+                <div class="bg-[#F4C430] p-8 rounded-lg">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <!-- Text Content -->
+                        <div class="md:w-1/2 pr-8">
+                            <h1 class="text-6xl font-bold mb-4" style="font-family: 'Arial Black', sans-serif;">
+                                15% DISCOUNT
+                            </h1>
+                            <p class="text-lg mb-6">
+                                Exclusive Offers for New Clients - Get 15% off
+                                your first visit to Rising Beauty Salon! Call
+                                (+732) 992 5960 or email us at [Email] to claim
+                                this limited-time offer.
+                            </p>
+                            <button
+                                class="bg-black text-white px-8 py-3 text-lg font-bold hover:bg-gray-900 transition duration-300"
+                                onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                                BOOK NOW
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Image -->
+                <div style="position: relative; left: 73%; margin-top: -27%; width: 27%;" class="md:w-1/2 mt-8 md:mt-0">
+                    <img style="width: 100%; height: 100%;" alt="Bearded man holding scissors"
+                        class="w-full h-auto object-cover" src="img/img.png" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer/Contact Section -->
+        <footer id="contact" class="bg-black text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-8">
+                    <h2 class="text-4xl font-bold">CONTACT US</h2>
+                    <p class="text-lg mt-2">Get in Touch with Rising Beauty Studio</p>
+                    <p class="text-gray-400 mt-1">Have questions or ready to book an appointment? We'd love to hear from
+                        you!</p>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
+                    <!-- Contact Form -->
+                    <div class="md:w-1/2">
+                        <h3 class="text-xl mb-4">Get in touch</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm mb-1">Name*</label>
+                                <input type="text" class="w-full p-2 rounded bg-gray-800 border border-gray-700"
+                                    required>
+                            </div>
+                            <div>
+                                <label class="block text-sm mb-1">Phone*</label>
+                                <input type="tel" class="w-full p-2 rounded bg-gray-800 border border-gray-700"
+                                    required>
+                            </div>
+                            <div>
+                                <label class="block text-sm mb-1">Email*</label>
+                                <input type="email" class="w-full p-2 rounded bg-gray-800 border border-gray-700"
+                                    required>
+                            </div>
+                            <div>
+                                <label class="block text-sm mb-1">Message*</label>
+                                <textarea class="w-full p-2 rounded bg-gray-800 border border-gray-700 h-32"
+                                    required></textarea>
+                            </div>
+                            <button
+                                style="background: url('img/Group 10.png'); background-size: cover; width: 150px; height: 40px;"
+                                class="text-white rounded hover:opacity-90 transition duration-300"
+                                onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                                SUBMIT
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="md:w-1/2 flex flex-col justify-center">
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="text-center">
+                                <i class="fas fa-clock text-yellow-500 text-3xl mb-2"></i>
+                                <h3 class="font-bold text-lg uppercase mb-2">WORKING HOURS</h3>
+                                <p class="text-gray-400">Mon - Fri: 10am - 6pm</p>
+                                <p class="text-gray-400">Sat - Sun: 10am - 6pm</p>
                             </div>
 
-                        </div>
+                            <div class="text-center">
+                                <i class="fas fa-map-marker-alt text-yellow-500 text-3xl mb-2"></i>
+                                <h3 class="font-bold text-lg uppercase mb-2">ADDRESS</h3>
+                                <p class="text-gray-400">200 Buckelew Ave 2nd Floor</p>
+                                <p class="text-gray-400">Suite F, Jamesburg, NJ 08831</p>
+                            </div>
 
-                    </div>
-                    <!-- Image -->
-                    <div style="position: relative; left: 73%; margin-top: -27%; width: 27%;"
-                        class="md:w-1/2 mt-8 md:mt-0">
-                        <img style="width: 100%; height: 100%;" alt="Bearded man holding scissors"
-                            class="w-full h-auto object-cover"
-                            src="img/img.png" />
-                    </div>
-                </div>
-            </section>
+                            <div class="text-center">
+                                <i class="fas fa-phone text-yellow-500 text-3xl mb-2"></i>
+                                <h3 class="font-bold text-lg uppercase mb-2">PHONE</h3>
+                                <p class="text-gray-400">(+732) 992 5960</p>
+                                <!-- <p class="text-gray-400">(+732) 992 5960</p> -->
+                            </div>
 
-            <!-- Footer/Contact Section -->
-            <footer id="contact" class="bg-black text-white py-16">
-                <div class="container mx-auto px-4">
-                    <div class="text-center mb-8">
-                        <h2 class="text-4xl font-bold">CONTACT US</h2>
-                        <p class="text-lg mt-2">Get in Touch with Rising Beauty Studio</p>
-                        <p class="text-gray-400 mt-1">Have questions or ready to book an appointment? We'd love to hear from you!</p>
-                    </div>
-
-                    <div class="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
-                        <!-- Contact Form -->
-                        <div class="md:w-1/2">
-                            <h3 class="text-xl mb-4">Get in touch</h3>
-                            <form class="space-y-4">
-                                <div>
-                                    <label class="block text-sm mb-1">Name*</label>
-                                    <input type="text" class="w-full p-2 rounded bg-gray-800 border border-gray-700" required>
-                                </div>
-                                <div>
-                                    <label class="block text-sm mb-1">Phone*</label>
-                                    <input type="tel" class="w-full p-2 rounded bg-gray-800 border border-gray-700" required>
-                                </div>
-                                <div>
-                                    <label class="block text-sm mb-1">Email*</label>
-                                    <input type="email" class="w-full p-2 rounded bg-gray-800 border border-gray-700" required>
-                                </div>
-                                <div>
-                                    <label class="block text-sm mb-1">Message*</label>
-                                    <textarea class="w-full p-2 rounded bg-gray-800 border border-gray-700 h-32" required></textarea>
-                                </div>
-                                <button style="background: url('img/Group 10.png'); background-size: cover; width: 150px; height: 40px;" class="text-white rounded hover:opacity-90 transition duration-300"
-                                    onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                                    SUBMIT
-                                </button>
-                            </form>
-                        </div>
-
-                        <!-- Contact Info -->
-                        <div class="md:w-1/2 flex flex-col justify-center">
-                            <div class="grid grid-cols-2 gap-8">
-                                <div class="text-center">
-                                    <i class="fas fa-clock text-yellow-500 text-3xl mb-2"></i>
-                                    <h3 class="font-bold text-lg uppercase mb-2">WORKING HOURS</h3>
-                                    <p class="text-gray-400">Mon - Fri: 10am - 6pm</p>
-                                    <p class="text-gray-400">Sat - Sun: 10am - 6pm</p>
-                                </div>
-
-                                <div class="text-center">
-                                    <i class="fas fa-map-marker-alt text-yellow-500 text-3xl mb-2"></i>
-                                    <h3 class="font-bold text-lg uppercase mb-2">ADDRESS</h3>
-                                    <p class="text-gray-400">200 Buckelew Ave 2nd Floor</p>
-                                    <p class="text-gray-400">Suite F, Jamesburg, NJ 08831</p>
-                                </div>
-
-                                <div class="text-center">
-                                    <i class="fas fa-phone text-yellow-500 text-3xl mb-2"></i>
-                                    <h3 class="font-bold text-lg uppercase mb-2">PHONE</h3>
-                                    <p class="text-gray-400">(+732) 992 5960</p>
-                                    <!-- <p class="text-gray-400">(+732) 992 5960</p> -->
-                                </div>
-
-                                <div class="text-center">
-                                    <i class="fas fa-envelope text-yellow-500 text-3xl mb-2"></i>
-                                    <h3 class="font-bold text-lg uppercase mb-2">EMAIL</h3>
-                                    <p class="text-gray-400">info@company.com</p>
-                                </div>
+                            <div class="text-center">
+                                <i class="fas fa-envelope text-yellow-500 text-3xl mb-2"></i>
+                                <h3 class="font-bold text-lg uppercase mb-2">EMAIL</h3>
+                                <p class="text-gray-400">info@company.com</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="text-center text-gray-500 text-sm mt-12">
-                    Copyright © [Year] Rising Beauty Salon. All rights reserved
-                </div>
-            </footer>
-        </div>
+            </div>
+            <div class="text-center text-gray-500 text-sm mt-12">
+                Copyright © [Year] Rising Beauty Salon. All rights reserved
+            </div>
+        </footer>
+    </div>
     </div>
 
     <script>
         // Splash screen timing
-        window.addEventListener('load', function() {
-            setTimeout(function() {
+        window.addEventListener('load', function () {
+            setTimeout(function () {
                 const splash = document.getElementById('splash-screen');
                 const mainContent = document.getElementById('main-content');
-                
+
                 // Add fade out effect
                 splash.classList.add('fade-out');
-                
+
                 // After fade out, hide splash and show main content
-                setTimeout(function() {
+                setTimeout(function () {
                     splash.style.display = 'none';
                     mainContent.style.display = 'block';
                 }, 500);
@@ -861,7 +924,7 @@
         });
 
         // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const menuButton = document.getElementById('menuButton');
             const closeMenu = document.getElementById('closeMenu');
             const mobileMenu = document.getElementById('mobileMenu');
@@ -882,13 +945,13 @@
                 }
             }
 
-            menuButton.addEventListener('click', function(e) {
+            menuButton.addEventListener('click', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
                 toggleMenu(true);
             });
 
-            closeMenu.addEventListener('click', function(e) {
+            closeMenu.addEventListener('click', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
                 toggleMenu(false);
@@ -896,18 +959,40 @@
 
             // Close menu when clicking on links
             Array.from(mobileMenuLinks).forEach(link => {
-                link.addEventListener('click', function() {
+                link.addEventListener('click', function () {
                     toggleMenu(false);
                 });
             });
 
             // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (mobileMenu.classList.contains('show') && !mobileMenu.contains(e.target) && e.target !== menuButton) {
                     toggleMenu(false);
                 }
             });
         });
+
+        // Image slider functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('#imageSlider img');
+            let currentImageIndex = 0;
+
+            // Show first image initially
+            images[0].style.opacity = '1';
+
+            // Change image every 3 seconds
+            setInterval(() => {
+                // Hide current image
+                images[currentImageIndex].style.opacity = '0';
+
+                // Move to next image
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+
+                // Show next image
+                images[currentImageIndex].style.opacity = '1';
+            }, 3000);
+        });
     </script>
 </body>
+
 </html>
